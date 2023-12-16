@@ -1,0 +1,15 @@
+# Ignore Cargo lock files
+Cargo.lock
+
+# Ignore build output
+target/
+
+# Ignore .env files
+.env
+
+# Ignore files related to your text editor or IDE
+.idea/
+*.swp
+*.swo
+*.swn
+*.bak
