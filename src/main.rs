@@ -1,13 +1,15 @@
 mod red_black_tree;
-use red_black_tree::{tree::RedBlackTree, node::Node};
+use red_black_tree::tree::RedBlackTree;
 
 fn main() {
-    let tree: RedBlackTree<String> = RedBlackTree::new();
-    let root: Option<&Box<Node<String>>> = tree.get_root();
+    let mut tree: RedBlackTree<String> = RedBlackTree::new();
 
-    if root.is_none() {
-        println!("Root is None");
-    } else {
-        println!("Root is not None");
+    let key: String = String::from("key");
+    let value: String = String::from("value");
+
+    tree.insert(key, value);
+
+    if let Some(node) = tree.get_root() {
+        println!("root: {}", node.key);
     }
 }
